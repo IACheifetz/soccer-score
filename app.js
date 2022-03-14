@@ -111,15 +111,14 @@ function refreshCurrentGameEl() {
 
 function displayAllGames() {
     // clear out the past games list in the DOM
+    pastGamesEl.textContent = '';
     // loop through the past games in state
     for (let game of pastGames) {
-        const gameEl = renderGame(game);
+        const pastGameEl = renderGame(name1, name2, score1, score2, game);
 
-        gameEl.classList.add('past');
+        pastGameEl.classList.add('past');
+        pastGamesEl.append(pastGameEl);
     }
-
     // use the renderGame function to render and append a past game for each past game in state
-    const pastGameEl = renderGame(name1, name2, score1, score2);
-    pastGamesEl.append(pastGameEl);
     // again, review the renderGame function in render-utils.js. How many arguments does it take? What order does it take them in?
 }
