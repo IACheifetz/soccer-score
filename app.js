@@ -119,7 +119,7 @@ function displayAllGames() {
     }
 
     // use the renderGame function to render and append a past game for each past game in state
-    const gameEl = renderGame(name1, name2, score1, score2);
-    pastGamesEl.append(gameEl);
+    const pastGameEl = renderGame(name1, name2, score1, score2);
+    pastGamesEl.append(pastGameEl);
     // again, review the renderGame function in render-utils.js. How many arguments does it take? What order does it take them in?
 }
