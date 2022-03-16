@@ -114,8 +114,7 @@ function displayAllGames() {
     pastGamesEl.textContent = '';
     // loop through the past games in state
     for (let game of pastGames) {
-        const pastGameEl = renderGame(name1, name2, score1, score2, game);
-
+        const pastGameEl = renderGame(game.name1, game.name2, game.score1, game.score2);
         pastGameEl.classList.add('past');
         pastGamesEl.append(pastGameEl);
     }
